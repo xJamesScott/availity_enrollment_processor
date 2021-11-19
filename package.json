@@ -9,20 +9,24 @@
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-zip": "^3.0.0",
+    "hookrouter": "^1.2.5",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
+    "papaparse": "^5.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "yarn": "^1.22.17"
   },
   "scripts": {
     "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node backend/bin/www",
+    "server": "nodemon backend/bin/www",
     "client": "cd frontend && react-scripts start",
     "server-with-client": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },

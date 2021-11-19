@@ -7,12 +7,13 @@
 var app = require('../app');
 var debug = require('debug')('backend:server');
 var http = require('http');
+var fs = require('fs');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '9000');
+var port = normalizePort(process.env.PORT || '8000');
 app.set('port', port);
 
 /**
@@ -48,6 +49,8 @@ function normalizePort(val) {
 
   return false;
 }
+
+// const dir = fs.readdir();
 
 /**
  * Event listener for HTTP server "error" event.
